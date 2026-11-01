@@ -88,6 +88,7 @@
 	.header_first h2 span{font-size: 23px;}
 	.header_first p{font-size: 27px;}
 	
+	/*
 	.main_body_wrap{margin-top: 40px;}
 	.main_body_wrap ul li{width: 100%;}
 	.main_body_wrap ul li:nth-child(3n+1){margin-left: 2%;}
@@ -95,6 +96,7 @@
 	.main_body_wrap ul li:nth-child(n+2){margin-top: 40px;}
 	.main_body_wrap ul li span{margin-bottom: 10px;}
 	.main_body_wrap ul li b{font-size: 19px;}
+	*/
 }
 
 
