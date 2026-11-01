@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="format-detection" content="telephone=no">
+	
+<title>경운대학교 디자인융합학부 2025 과제전</title>
+
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/vendor.css">
+<link rel="stylesheet" href="../css/style.css">
+
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/vendor.js"></script>
+	
+<link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+	<a href="../index.html" class="back_go"></a>
+	<div class="sub-detail" data-aos="fade-down">
+		<img id="detailImage" src="" alt="상세 이미지">
+	</div>
+	<a href="javascript:void(0);" class="top_go"></a>
+	<script>
+		/* 동작 타이머 */
+		const IDLE_TIME_LIMIT = 120000;
+		let idleTimer;
+		const targetUrl = '../index.html';
+		function startIdleTimer() {
+			clearTimeout(idleTimer);
+			idleTimer = setTimeout(redirectToHome, IDLE_TIME_LIMIT);
+		}
+		function redirectToHome() {
+			window.location.href = targetUrl;
+		}
+		$(document).on('mousemove keydown scroll touchstart touchend', function() {
+			startIdleTimer();
+		});
+		startIdleTimer();
+		
+		/* 이미지 불러오기 */
+		const urlParams = new URLSearchParams(window.location.search);
+		const imgNum = urlParams.get('img') || '01';
+		const detailImg = document.getElementById('detailImage');
+		detailImg.src = `../img/body/stt_${imgNum}.jpg`;
+		detailImg.alt = `상세 이미지 ${imgNum}`;
+	</script>
+	<script src="../js/common.js"></script>
+</body>
+</html>
