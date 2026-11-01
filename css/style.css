@@ -1,0 +1,105 @@
+@charset "utf-8";
+/* CSS Document */
+
+.student_list li a, .thumb_infor h4, .thumb_infor p, .thumb_infor b{
+	-webkit-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	-moz-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	-o-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	-ms-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+
+.thumb_list > li > a img{
+	-webkit-transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	-moz-transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	-o-transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	-ms-transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+.main_wrap{background: #D80027; width: 100%; transition: background-color 2s ease-in-out;}
+.main_wrap .inner_wrap{position: relative; padding: 60px;}
+
+.main_header_wrap > ul{display: flex; justify-content: space-between;}
+.header_first .header_logo img{width: 100%; max-width: 218px;}
+.header_first b{display: block; font-size: 31px; font-weight: 300; color: #fff; margin-top: 30px;}
+.header_first h2{font-size: 80px; font-weight: 700; color: #fff; margin-top: 5px;}
+.header_first h2 span{display: inline-block; margin-left: 5px; font-size: 40px; font-weight: 600;}
+.header_first p{font-size: 45px; font-weight: 700; color: #000; margin-top: 5px;}
+.header_second{text-align: right; margin-top: 50px;}
+.header_second .header_qr{display: inline-block;}
+.header_second .header_qr img{width: 100%; max-width: 120px;}
+.header_second p{text-align: right; font-size: 21px; font-weight: 300; color: #fff; margin-top: 15px;}
+
+.main_body_wrap{margin-top: 70px;}
+.main_body_wrap ul{display: flex;flex-wrap: wrap;}
+.main_body_wrap ul li{width: 32%; margin-left: 2%}
+.main_body_wrap ul li:nth-child(3n+1){margin-left: 0;}
+.main_body_wrap ul li:nth-child(n+4){margin-top: 50px;}
+.main_body_wrap ul li a{display: inline-block;}
+.main_body_wrap ul li span{display: inline-block; border-radius: 10px; overflow: hidden; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); margin-bottom: 10px;}
+.main_body_wrap ul li b{display: block; font-size: 23px; color: #fff; font-weight: 600; text-align: center;}
+.main_body_wrap ul li img{width: 100%;}
+
+
+
+/* Sub */
+.sub-detail img{width: 100%;}
+
+.back_go, .back_go:active{position:fixed; z-index:20; left:50px; top:58px; width:82px; height:82px; background:url(../img/back.svg) center no-repeat #D80027; background-size:contain; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4); border-radius: 50%;}
+.top_go, .top_go:active{position:fixed; z-index:20; right:50px; bottom:58px; width:82px; height:82px; background:url(../img/top.png) center no-repeat #fff; background-size:contain; display:none; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4); border-radius: 50%;}
+
+@media all and (max-width:960px) {
+	.main_header_wrap > ul{flex-wrap: wrap;}
+	.main_header_wrap > ul > li{width: 100%;}
+	.main_header_wrap > ul > li:nth-child(2){display: none;}
+}
+
+@media all and (max-width:768px) {
+	.main_wrap .inner_wrap{padding: 30px 3%;}
+	
+	.header_first .header_logo img{max-width: 160px;}
+	.header_first b{font-size: 25px; margin-top: 20px;}
+	.header_first h2{font-size: 50px;}
+	.header_first h2 span{font-size: 27px;}
+	.header_first p{font-size: 35px;}
+	
+	.main_body_wrap{margin-top: 50px;}
+	.main_body_wrap ul li{width: 49%;}
+	.main_body_wrap ul li:nth-child(3n+1){margin-left: 2%;}
+	.main_body_wrap ul li:nth-child(2n+1){margin-left: 0;}
+	.main_body_wrap ul li:nth-child(n+3){margin-top: 30px;}
+	.main_body_wrap ul li span{margin-bottom: 5px;}
+	.main_body_wrap ul li b{font-size: 19px;}
+	
+	.back_go, .back_go:active{left:2%; top:20px; width:50px; height:50px;}
+	.top_go, .top_go:active{right:2%; bottom:20px; width:50px; height:50px;}
+}
+
+
+
+@media all and (max-width:480px) {
+	.main_wrap .inner_wrap{padding: 30px 3%;}
+	
+	.header_first .header_logo img{max-width: 140px;}
+	.header_first b{font-size: 21px; margin-top: 20px;}
+	.header_first h2{font-size: 45px;}
+	.header_first h2 span{font-size: 23px;}
+	.header_first p{font-size: 27px;}
+	
+	.main_body_wrap{margin-top: 40px;}
+	.main_body_wrap ul li{width: 100%;}
+	.main_body_wrap ul li:nth-child(3n+1){margin-left: 2%;}
+	.main_body_wrap ul li:nth-child(2n+1){margin-left: 2%;}
+	.main_body_wrap ul li:nth-child(n+2){margin-top: 40px;}
+	.main_body_wrap ul li span{margin-bottom: 10px;}
+	.main_body_wrap ul li b{font-size: 19px;}
+}
+
+
+
+
+
+
+
